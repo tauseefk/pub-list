@@ -1,0 +1,38 @@
+{
+  "name": "pub-list",
+  "version": "1.0.0",
+  "description": "A publishing platform for noobs",
+  "main": "index.js",
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  },
+  "dependencies": {
+    "express": "^4.13.4",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7"
+  },
+  "devDependencies": {
+    "babel": "^6.3.26",
+    "babel-core": "^6.4.5",
+    "babel-loader": "^6.2.1",
+    "babel-preset-react": "^6.3.13",
+    "webpack": "^1.12.12"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tauseefk/pub-list.git"
+  },
+  "keywords": [
+    "publishing"
+  ],
+  "author": "Tauseefk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tauseefk/pub-list/issues"
+  },
+  "homepage": "https://github.com/tauseefk/pub-list#readme"
+}
