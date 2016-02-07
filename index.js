@@ -16,8 +16,6 @@ app.get('/', function(req, res){
        +'<html>'
        +'<head>'
        +'<link rel="stylesheet" href="/app/styles/bootstrap.min.css">'
-       +'<link rel="stylesheet" href="/app/styles/global.css">'
-       +'<link rel="stylesheet" href="/app/styles/homePage.css">'
        +'<link rel="stylesheet" href="/app/styles/cleaner.css">'
        +'<title>Pub List</title>'
        +'</head>'
