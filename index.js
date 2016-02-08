@@ -3,14 +3,16 @@
 var express = require('express'),
     React = require('react'),
     ReactDOMServer = require('react-dom/server'),
-    HomePage = require('./app/scripts/raw/HomePage-raw'),
+    HomePage = React.createFactory(require('./app/scripts/raw/HomePage-raw')),
     app = express();
 
 app.use('/app/', express.static(__dirname + '/app/'));
 
 app.get('/', function(req, res){
-    var homePageFactory = React.createFactory(HomePage)({});
-    var reactHTML = ReactDOMServer.renderToString(homePageFactory);
+    var props = {
+            blip: "May with you, be the props!!"
+        }
+    var reactHTML = ReactDOMServer.renderToString(HomePage(props));
     var html =
     '<!DOCTYPE html>'
        +'<html>'
@@ -23,8 +25,11 @@ app.get('/', function(req, res){
        +'<div id="app">'
        +reactHTML
        +'</div>'
-       +'<script src="https://fbcdn-dragon-a.akamaihd.net/hphotos-ak-xfp1/t39.3284-6/12512209_757930467645024_1581528137_n.js"></script>'
-       +'<script src="https://fbcdn-dragon-a.akamaihd.net/hphotos-ak-xap1/t39.3284-6/12512195_1650705818529971_1541151294_n.js"></script>'
+       +'<script>'
+       +'var APP_PROPS = ' + JSON.stringify(props.blip) + ';'
+       +'</script>'
+       +'<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react.js"></script>'
+       +'<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react-dom.js"></script>'
        +'<script src="/app/scripts/bundle/bundle.js"></script>'
        +'</body>'
        +'</html>';

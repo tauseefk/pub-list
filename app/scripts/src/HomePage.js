@@ -11,7 +11,8 @@ module.exports = React.createClass({
             + " Lorem ipsum dolor sit amet, ne ullum tritani rationibus qui, dictas splendide voluptatum ex quo. Ei prima corrumpit pri, et duo noster aliquam prodesset. Albucius accusamus his ex. Eum sanctus inimicus id. Quo ea persius aliquam consulatu, tota vocibus eu his. Mel eu verear senserit, ius ei perfecto voluptatum. Sapientem vulputate eum id, pri persius iuvaret an, deleniti philosophia vis ea. Adipisci expetenda disputationi vix ex, mei modo possim admodum eu. Nam utamur abhorreant in."
             + " Lorem ipsum dolor sit amet, ne ullum tritani rationibus qui, dictas splendide voluptatum ex quo. Ei prima corrumpit pri, et duo noster aliquam prodesset. Albucius accusamus his ex. Eum sanctus inimicus id. Quo ea persius aliquam consulatu, tota vocibus eu his. Mel eu verear senserit, ius ei perfecto voluptatum. Sapientem vulputate eum id, pri persius iuvaret an, deleniti philosophia vis ea. Adipisci expetenda disputationi vix ex, mei modo possim admodum eu. Nam utamur abhorreant in."
             + " Lorem ipsum dolor sit amet, ne ullum tritani rationibus qui, dictas splendide voluptatum ex quo. Ei prima corrumpit pri, et duo noster aliquam prodesset. Albucius accusamus his ex. Eum sanctus inimicus id. Quo ea persius aliquam consulatu, tota vocibus eu his. Mel eu verear senserit, ius ei perfecto voluptatum. Sapientem vulputate eum id, pri persius iuvaret an, deleniti philosophia vis ea. Adipisci expetenda disputationi vix ex, mei modo possim admodum eu. Nam utamur abhorreant in.",
-            avatar: "https://upload.wikimedia.org/wikipedia/en/a/a5/Pok%C3%A9mon_Charmander_art.png"
+            avatar: "https://upload.wikimedia.org/wikipedia/en/a/a5/Pok%C3%A9mon_Charmander_art.png",
+            blip: this.props.blip
         }
     },
     evolve: function() {
@@ -33,7 +34,7 @@ module.exports = React.createClass({
         return (
             <div>
                 <NavigationBar evolve={this.evolve} name={this.state.name} avatar={this.state.avatar}/>
-                <PostContent name={this.state.name} desc={this.state.desc} lorem={this.state.lorem}/>
+                <PostContent name={this.state.name} desc={this.state.desc} lorem={this.state.lorem} blip={this.state.blip}/>
             </div>
         )
     }
@@ -95,6 +96,7 @@ var PostContent = React.createClass({
                 <p className="post-content--body font-21">{this.props.desc}</p>
                 <h1 className="post-content--h1 font-N7">Lorem</h1>
                 <p className="post-content--body font-21">{this.props.lorem}</p>
+                <h2 className="post-content--h2 font-N7">{this.props.blip}</h2>
             </div>
         )
     }
