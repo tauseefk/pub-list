@@ -116,7 +116,7 @@ var PostContent = React.createClass({
             { className: "" },
             React.createElement(
                 "div",
-                { className: "post-content u-margin-header" },
+                { className: "layoutSingleColumn u-margin-header" },
                 React.createElement(
                     "h1",
                     { className: "post-content--h1 font-N7 font--sans" },

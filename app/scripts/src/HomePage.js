@@ -94,7 +94,7 @@ var PostContent = React.createClass({
     render: function() {
         return (
             <article className="">
-                <div className="post-content u-margin-header">
+                <div className="layoutSingleColumn u-margin-header">
                     <h1 className="post-content--h1 font-N7 font--sans">{this.props.name}</h1>
                     <p className="post-content--body">{this.props.desc}</p>
                     <h1 className="post-content--h1 font-N7 font--sans">Lorem</h1>
