@@ -1,4 +1,5 @@
-const React = require('react');
+var React = require('react'),
+    Ajax = require('../src/ajaxReq.js');
 module.exports = React.createClass({
     getInitialState: function() {
         return {
@@ -13,10 +14,21 @@ module.exports = React.createClass({
             + " Lorem ipsum dolor sit amet, ne ullum tritani rationibus qui, dictas splendide voluptatum ex quo. Ei prima corrumpit pri, et duo noster aliquam prodesset. Albucius accusamus his ex. Eum sanctus inimicus id. Quo ea persius aliquam consulatu, tota vocibus eu his. Mel eu verear senserit, ius ei perfecto voluptatum. Sapientem vulputate eum id, pri persius iuvaret an, deleniti philosophia vis ea. Adipisci expetenda disputationi vix ex, mei modo possim admodum eu. Nam utamur abhorreant in.",
             avatar: "https://upload.wikimedia.org/wikipedia/en/a/a5/Pok%C3%A9mon_Charmander_art.png",
             blip: this.props.blip,
-            isEvolved: false
+            isEvolved: false,
+            images: []
         }
     },
     evolve: function() {
+        var aj = Ajax({
+            url: "http://localhost:3000/tag",
+            callback: function(xhr) {
+                var imagesData = JSON.parse(xhr.response);
+                this.setState({
+                    images: imagesData
+                })
+            }.bind(this)
+        });
+        aj.send();
         this.setState({
             name: "Charizard",
             desc: "Charizard flies around the sky in search of powerful opponents. It breathes fire of such great heat that it melts anything. However, it never turns its fiery breath on any opponent weaker than itself. \n",
@@ -36,7 +48,7 @@ module.exports = React.createClass({
         return (
             <div>
                 <NavigationBar evolve={this.evolve} name={this.state.name} avatar={this.state.avatar} isEvolved={this.state.isEvolved}/>
-                <PostContent name={this.state.name} desc={this.state.desc} lorem={this.state.lorem} blip={this.state.blip}/>
+                <PostContent name={this.state.name} desc={this.state.desc} lorem={this.state.lorem} images={this.state.images} blip={this.state.blip}/>
             </div>
         )
     }
@@ -92,14 +104,21 @@ var NavigationBar = React.createClass({
 
 var PostContent = React.createClass({
     render: function() {
+        var images = this.props.images.map(function(image){
+                return (
+                    <div className="postContent--image">
+                        <img src={image.imageUrl} />
+                    </div>
+                )
+            });
         return (
             <article className="">
                 <div className="layoutSingleColumn u-margin-header">
-                    <h1 className="post-content--h1 font-N7 font--sans">{this.props.name}</h1>
-                    <p className="post-content--body">{this.props.desc}</p>
-                    <h1 className="post-content--h1 font-N7 font--sans">Lorem</h1>
-                    <p className="post-content--body">{this.props.lorem}</p>
-                    <h2 className="post-content--h2 font-N7 font--sans">{this.props.blip}</h2>
+                    <h1 className="postContent--h1 font-N7 font--sans">{this.props.name}</h1>
+                    <p className="postContent--p">{this.props.desc}</p>
+                    <h1 className="postContent--h1 font-N7 font--sans">Lorem</h1>
+                    <p className="postContent--p">{this.props.lorem}</p>
+                    <h2 className="postContent--h2 font-N7 font--sans">{this.props.blip}</h2>
                 </div>
             </article>
         )

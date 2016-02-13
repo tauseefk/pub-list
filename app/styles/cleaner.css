@@ -158,18 +158,24 @@ body {
     clear:both;
 }
 
-.post-content--body {
+.postContent--p {
     line-height: 1.58;
     letter-spacing: -.004em;
     font-size: 20px;
 }
 
-.post-content--h1 {
+.postContent--h1 {
     font-size: 36px;
 }
 
-.post-content--h2 {
+.postContent--h2 {
     font-size: 28px;
+}
+
+.postContent--image {
+    width: 100%;
+    height: auto;
+    margin: 20px auto;
 }
 
 .is-evolved {
