@@ -6,6 +6,8 @@ var express = require('express'),
     HomePage = React.createFactory(require('./app/scripts/raw/HomePage-raw')),
     app = express();
 
+app.set('port', (process.env.PORT || 5000));
+
 app.use('/app/', express.static(__dirname + '/app/'));
 
 app.get('/', function(req, res){
