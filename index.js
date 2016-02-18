@@ -37,7 +37,6 @@ app.get('/', function(req, res){
        res.send(html);
 })
 
-var server = app.listen(5000, function () {
-  var port = server.address().port;
-  console.log("Listening on port :" + port);
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
 });
