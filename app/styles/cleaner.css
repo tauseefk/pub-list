@@ -3,53 +3,53 @@
 /*Scale fade animation by @nscramer */
 @-webkit-keyframes scale-fade{
 
-  0%{
-    filter:alpha(opacity=0);
-    -khtml-opacity:0;
-    -moz-opacity:0;
-    opacity:0;
+    0%{
+        filter:alpha(opacity=0);
+        -khtml-opacity:0;
+        -moz-opacity:0;
+        opacity:0;
 
-    -webkit-transform:scale(0.8) rotateX(-40deg);
-    -moz-transform:scale(0.8) rotateX(-40deg);
-    -ms-transform:scale(0.8) rotateX(-40deg);
-    -o-transform:scale(0.8) rotateX(-40deg);
-    transform:scale(0.8) rotateX(-40deg)
-  }
+        -webkit-transform:scale(0.8) rotateX(-40deg);
+        -moz-transform:scale(0.8) rotateX(-40deg);
+        -ms-transform:scale(0.8) rotateX(-40deg);
+        -o-transform:scale(0.8) rotateX(-40deg);
+        transform:scale(0.8) rotateX(-40deg)
+    }
 
-  50%{
-    filter:alpha(opacity=100);
-    -khtml-opacity:1;
-    -moz-opacity:1;
-    opacity:1
-  }
+    50%{
+        filter:alpha(opacity=100);
+        -khtml-opacity:1;
+        -moz-opacity:1;
+        opacity:1
+    }
 
-  70%{
-    -webkit-transform:scale(1.05) rotateX(0);
-    -moz-transform:scale(1.05) rotateX(0);
-    -ms-transform:scale(1.05) rotateX(0);
-    -o-transform:scale(1.05) rotateX(0);
-    transform:scale(1.05) rotateX(0)
-  }
+    70%{
+        -webkit-transform:scale(1.05) rotateX(0);
+        -moz-transform:scale(1.05) rotateX(0);
+        -ms-transform:scale(1.05) rotateX(0);
+        -o-transform:scale(1.05) rotateX(0);
+        transform:scale(1.05) rotateX(0)
+    }
 
-  100%{
-    -webkit-transform:scale(1) rotateX(0);
-    -moz-transform:scale(1) rotateX(0);
-    -ms-transform:scale(1) rotateX(0);
-    -o-transform:scale(1) rotateX(0);
-    transform:scale(1) rotateX(0)
-  }
+    100%{
+        -webkit-transform:scale(1) rotateX(0);
+        -moz-transform:scale(1) rotateX(0);
+        -ms-transform:scale(1) rotateX(0);
+        -o-transform:scale(1) rotateX(0);
+        transform:scale(1) rotateX(0)
+    }
 }
 
 
 body {
-  background-color: #fff;
-  -webkit-font-smoothing: antialiased;
-  font-family: "Lora","Helvetica Neue",sans-serif;
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Lora","Helvetica Neue",sans-serif;
 }
 
 .layoutSingleColumn {
-  margin: 0px auto;
-  width: 700px;
+    margin: 0px auto;
+    width: 700px;
 }
 
 .u-margin-header {
@@ -57,12 +57,12 @@ body {
 }
 
 .header {
-  width: 100%;
-  height: auto;
-  padding: 15px;
-  box-sizing: border-box;
-  border-radius: 4px 4px 0px 0px;
-  background-color: #fff;
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 4px 4px 0px 0px;
+    background-color: #fff;
 }
 
 .header-fixed--top {
@@ -86,11 +86,11 @@ body {
 }
 
 .u-floatLeft {
-  float: left !important;
+    float: left !important;
 }
 
 .u-floatRight {
-  float: right !important;
+    float: right !important;
 }
 
 .u-textAlign-center {
@@ -110,33 +110,33 @@ body {
 }
 
 .user-avatar {
-  display: table-cell;
-  vertical-align: middle;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .avatar-img {
-  width: 35px;
-  height: 35px;
-  display: inline-block;
-  border-radius: 50%;
-  margin: 0px 10px 0px 0px;
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0px 10px 0px 0px;
 }
 
 .user-details {
-  display: table-cell;
-  vertical-align: middle;
-  overflow: hidden;
+    display: table-cell;
+    vertical-align: middle;
+    overflow: hidden;
 }
 
 .user-details > span {
-  display: block;
-  font-size: 14px;
+    display: block;
+    font-size: 14px;
 }
 
 .content-accent,
 .content-accent:hover,
 .content-accent:active {
-  color: #00ab6b;
+    color: #00ab6b;
 }
 
 .background-accent {
@@ -147,11 +147,12 @@ body {
 .background-accent:hover,
 .background-accent:active,
 .background-accent:active:hover {
-  background-color: #1DB95C !important;
+    background-color: #2BDE73 !important;
+    background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.15));
 }
 
 .font-N7 {
-  font-weight: 700;
+    font-weight: 700;
 }
 
 .clearfix:before {
@@ -188,7 +189,7 @@ body {
 }
 
 .btn {
-    border-radius: 6px;
+    border-radius: 25px;
     -webkit-transition: all 0.1s ease-in-out;
     -moz-transition: all 0.1s ease-in-out;
     -ms-transition: all 0.1s ease-in-out;
