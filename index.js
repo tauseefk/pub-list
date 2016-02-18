@@ -21,7 +21,7 @@ app.get('/', function(req, res){
        +'<head>'
        +'<link rel="stylesheet" href="/app/styles/bootstrap.min.css">'
        +'<link rel="stylesheet" href="/app/styles/cleaner.css">'
-       +'<title>Pub List</title>'
+       +'<title>Silly Poke</title>'
        +'</head>'
        +'<body>'
        +'<div id="app">'
