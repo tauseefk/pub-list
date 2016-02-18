@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700|Lora:400,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700|Lora:400,700|Josefin+Sans:700);
 
 /*Scale fade animation by @nscramer */
 @-webkit-keyframes scale-fade{
@@ -106,7 +106,7 @@ body {
 }
 
 .font--sans {
-    font-family: "Open Sans";
+    font-family: "Open Sans",sans-serif;
 }
 
 .user-avatar {
@@ -139,11 +139,15 @@ body {
   color: #00ab6b;
 }
 
-.background-accent,
+.background-accent {
+    background-color: #2BDE73;
+}
+
+
 .background-accent:hover,
 .background-accent:active,
 .background-accent:active:hover {
-  background-color: #00ab6b !important;
+  background-color: #1DB95C !important;
 }
 
 .font-N7 {
@@ -181,4 +185,18 @@ body {
 .is-evolved {
     -webkit-animation: scale-fade 300ms;
     animation: scale-fade 300ms;
+}
+
+.btn {
+    border-radius: 6px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.navbar-nav>li>a {
+    padding-top: 12px;
+    padding-bottom: 12px;
 }

@@ -108,7 +108,7 @@ var NavigationBar = React.createClass({
                             null,
                             React.createElement(
                                 'a',
-                                { onClick: this.props.evolve, className: 'u-borderNone btn btn-primary background-accent text-uppercase' },
+                                { onClick: this.props.evolve, className: 'u-borderNone btn btn-primary background-accent font-N7 text-uppercase' },
                                 'Evolve'
                             )
                         )

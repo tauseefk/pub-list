@@ -92,7 +92,7 @@ var NavigationBar = React.createClass({
             		<div className="collapse navbar-collapse">
                   		<ul className="nav navbar-nav navbar-right">
             				<li>
-                  				<a onClick={this.props.evolve} className="u-borderNone btn btn-primary background-accent text-uppercase">Evolve</a>
+                  				<a onClick={this.props.evolve} className="u-borderNone btn btn-primary background-accent font-N7 text-uppercase">Evolve</a>
             				</li>
                   		</ul>
             		</div>
