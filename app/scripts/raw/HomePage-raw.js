@@ -15,16 +15,16 @@ module.exports = React.createClass({
         };
     },
     evolve: function () {
-        var aj = Ajax({
-            url: "http://localhost:3000/tag",
-            callback: (function (xhr) {
-                var imagesData = JSON.parse(xhr.response);
-                this.setState({
-                    images: imagesData
-                });
-            }).bind(this)
-        });
-        aj.send();
+        // var aj = Ajax({
+        //     url: "http://localhost:3000/tag",
+        //     callback: function(xhr) {
+        //         var imagesData = JSON.parse(xhr.response);
+        //         this.setState({
+        //             images: imagesData
+        //         })
+        //     }.bind(this)
+        // });
+        // aj.send();
         this.setState({
             name: "Charizard",
             desc: "Charizard flies around the sky in search of powerful opponents. It breathes fire of such great heat that it melts anything. However, it never turns its fiery breath on any opponent weaker than itself. \n",
