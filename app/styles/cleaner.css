@@ -207,4 +207,17 @@ body {
         margin-right: 20px;
         width: auto;
     }
+    .postContent--p {
+        line-height: 1.4;
+        letter-spacing: 0;
+        font-size: 18px;
+    }
+
+    .postContent--h1 {
+        font-size: 28px;
+    }
+
+    .postContent--h2 {
+        font-size: 22px;
+    }
 }
