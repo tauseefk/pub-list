@@ -22,6 +22,7 @@ app.get('/', function(req, res){
        +'<link rel="stylesheet" href="/app/styles/bootstrap.min.css">'
        +'<link rel="stylesheet" href="/app/styles/cleaner.css">'
        +'<title>Silly Poke</title>'
+       +'<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0">'
        +'</head>'
        +'<body>'
        +'<div id="app">'
