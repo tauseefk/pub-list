@@ -203,6 +203,8 @@ body {
 
 @media (max-width: 767px) {
     .layoutSingleColumn {
+        margin-left: 20px;
+        margin-right: 20px;
         width: auto;
     }
 }
