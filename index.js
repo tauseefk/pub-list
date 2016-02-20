@@ -26,6 +26,7 @@ app.get('/', function(req, res){
        +'<div id="app">'
        +reactHTML
        +'</div>'
+       +'<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>'
        +'<script src="/app/scripts/bundle/bundle.js"></script>'
        +'</body>'
        +'</html>';
