@@ -1,7 +1,6 @@
-var React = require('react'),
-    Ajax = require('../src/ajaxReq.js');
+var React = require('react');
 module.exports = React.createClass({
-    displayName: 'exports',
+    displayName: "exports",
 
     getInitialState: function () {
         return {
@@ -35,7 +34,7 @@ module.exports = React.createClass({
     },
     render: function () {
         return React.createElement(
-            'div',
+            "div",
             null,
             React.createElement(NavigationBar, { evolve: this.evolve, name: this.state.name, avatar: this.state.avatar, isEvolved: this.state.isEvolved }),
             React.createElement(PostContent, { name: this.state.name, desc: this.state.desc, lorem: this.state.lorem, images: this.state.images, blip: this.state.blip })
@@ -44,7 +43,7 @@ module.exports = React.createClass({
 });
 
 var NavigationBar = React.createClass({
-    displayName: 'NavigationBar',
+    displayName: "NavigationBar",
 
     getInitialState: function () {
         return {
@@ -69,47 +68,47 @@ var NavigationBar = React.createClass({
     },
     render: function () {
         return React.createElement(
-            'nav',
-            { className: 'font--sans' },
+            "nav",
+            { className: "font--sans" },
             React.createElement(
-                'div',
+                "div",
                 { className: this.state.scrollTop ? this.state.scrollDirection === "up" ? "header header-fixed--top is-inView header--affixed" : "header header-fixed--top is-hidden header--affixed" : "header header-fixed--top" },
                 React.createElement(
-                    'div',
-                    { className: 'u-floatLeft' },
+                    "div",
+                    { className: "u-floatLeft" },
                     React.createElement(
-                        'div',
-                        { className: 'user-avatar' },
-                        React.createElement('img', { src: this.props.avatar, className: this.props.isEvolved ? "avatar-img hidden-sm hidden-xs is-evolved" : "avatar-img hidden-sm hidden-xs" })
+                        "div",
+                        { className: "user-avatar" },
+                        React.createElement("img", { src: this.props.avatar, className: this.props.isEvolved ? "avatar-img hidden-sm hidden-xs is-evolved" : "avatar-img hidden-sm hidden-xs" })
                     ),
                     React.createElement(
-                        'div',
-                        { className: 'user-details' },
+                        "div",
+                        { className: "user-details" },
                         React.createElement(
-                            'span',
-                            { className: 'content-accent' },
+                            "span",
+                            { className: "content-accent" },
                             this.props.name
                         ),
                         React.createElement(
-                            'span',
-                            { className: 'user-type' },
-                            'Fire'
+                            "span",
+                            { className: "user-type" },
+                            "Fire"
                         )
                     )
                 ),
                 React.createElement(
-                    'div',
-                    { className: 'collapse navbar-collapse' },
+                    "div",
+                    { className: "collapse navbar-collapse" },
                     React.createElement(
-                        'ul',
-                        { className: 'nav navbar-nav navbar-right' },
+                        "ul",
+                        { className: "nav navbar-nav navbar-right" },
                         React.createElement(
-                            'li',
+                            "li",
                             null,
                             React.createElement(
-                                'a',
-                                { onClick: this.props.evolve, className: 'u-borderNone btn btn-primary background-accent font-N7 text-uppercase' },
-                                'Evolve'
+                                "a",
+                                { onClick: this.props.evolve, className: "u-borderNone btn btn-primary background-accent font-N7 text-uppercase" },
+                                "Evolve"
                             )
                         )
                     )
@@ -120,45 +119,45 @@ var NavigationBar = React.createClass({
 });
 
 var PostContent = React.createClass({
-    displayName: 'PostContent',
+    displayName: "PostContent",
 
     render: function () {
         var images = this.props.images.map(function (image) {
             return React.createElement(
-                'div',
-                { className: 'postContent--image' },
-                React.createElement('img', { src: image.imageUrl })
+                "div",
+                { className: "postContent--image" },
+                React.createElement("img", { src: image.imageUrl })
             );
         });
         return React.createElement(
-            'article',
-            { className: '' },
+            "article",
+            { className: "" },
             React.createElement(
-                'div',
-                { className: 'layoutSingleColumn u-margin-header' },
+                "div",
+                { className: "layoutSingleColumn u-margin-header" },
                 React.createElement(
-                    'h1',
-                    { className: 'postContent--h1 font-N7 font--sans' },
+                    "h1",
+                    { className: "postContent--h1 font-N7 font--sans" },
                     this.props.name
                 ),
                 React.createElement(
-                    'p',
-                    { className: 'postContent--p' },
+                    "p",
+                    { className: "postContent--p" },
                     this.props.desc
                 ),
                 React.createElement(
-                    'h1',
-                    { className: 'postContent--h1 font-N7 font--sans' },
-                    'Lorem'
+                    "h1",
+                    { className: "postContent--h1 font-N7 font--sans" },
+                    "Lorem"
                 ),
                 React.createElement(
-                    'p',
-                    { className: 'postContent--p' },
+                    "p",
+                    { className: "postContent--p" },
                     this.props.lorem
                 ),
                 React.createElement(
-                    'h2',
-                    { className: 'postContent--h2 font-N7 font--sans' },
+                    "h2",
+                    { className: "postContent--h2 font-N7 font--sans" },
                     this.props.blip
                 )
             )

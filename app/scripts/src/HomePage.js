@@ -1,5 +1,4 @@
-var React = require('react'),
-    Ajax = require('../src/ajaxReq.js');
+var React = require('react');
 module.exports = React.createClass({
     getInitialState: function() {
         return {

@@ -1,6 +1,6 @@
 var React = require('react'),
-    ReactDOMServer = require('react-dom/server'),
-    ajax = require('./app/scripts/src/ajaxReq.js'),
-    HomePage = require('./app/scripts/src/HomePage.js');
+    ReactDOM = require('react-dom'),
+    HomePage = require('./app/scripts/src/HomePage.js'),
+    propsData = require('./app/scripts/src/propsData.js');
 
-ReactDOM.render(<HomePage blip={window.APP_PROPS}/>, document.getElementById('app'));
+ReactDOM.render(<HomePage blip={propsData.blip}/>, document.getElementById('app'));
