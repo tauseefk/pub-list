@@ -22,7 +22,7 @@ app.get('/', function(req, res){
        +'<title>Silly Poke</title>'
        +'<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0">'
        +'<meta charset="UTF-8">'
-       +'<meta name="description" content="Silly Pokemon served hot!!">'
+       +'<meta name="description" content="Silly Pokemon rendered server side!!">'
        +'<meta name="keywords" content="Silly Pokemon, silly Poke, server side rendering, react">'
        +'</head>'
        +'<body>'
