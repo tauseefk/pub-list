@@ -31,7 +31,7 @@ app.get('/', function(req, res){
        +'<div id="app">'
        +reactHTML
        +'</div>'
-       +'<script src="/app/scripts/bundle/bundle.js"></script>'
+       +'<script async src="/app/scripts/bundle/bundle.js"></script>'
        +'</body>'
        +'</html>';
 
