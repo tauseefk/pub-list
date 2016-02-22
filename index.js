@@ -5,10 +5,12 @@ var express = require('express'),
     ReactDOMServer = require('react-dom/server'),
     HomePage = React.createFactory(require('./app/scripts/raw/HomePage-raw')),
     app = express(),
+    compress = require('compression'),
     propsData = require('./app/scripts/src/propsData');
 
 app.set('port', (process.env.PORT || 5000));
 
+app.use(compress());
 app.use('/app/', express.static(__dirname + '/app/'));
 
 app.get('/', function(req, res){
