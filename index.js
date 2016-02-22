@@ -9,7 +9,6 @@ var express = require('express'),
 
 app.set('port', (process.env.PORT || 5000));
 
-app.use(express.compress());
 app.use('/app/', express.static(__dirname + '/app/'));
 
 app.get('/', function(req, res){
