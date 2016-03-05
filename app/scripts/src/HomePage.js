@@ -1,4 +1,5 @@
-var React = require('react');
+var React = require('react'),
+    promiseMe = require('../src/promiseMe.js');
 module.exports = React.createClass({
     getInitialState: function() {
         return {
