@@ -15,12 +15,6 @@ module.exports = React.createClass({
         };
     },
     evolve: function () {
-
-        promiseMe("GET", "http://localhost:3000/shit").then(function (res) {
-            console.log(res);
-        }).catch(function (res) {
-            console.log(res);
-        });
         this.setState({
             name: "Charizard",
             desc: "Charizard flies around the sky in search of powerful opponents. It breathes fire of such great heat that it melts anything. However, it never turns its fiery breath on any opponent weaker than itself. \n",

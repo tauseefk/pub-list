@@ -11,6 +11,7 @@ exports.route = function(req, res){
        +'<head>'
        +'<link rel="stylesheet" href="/app/styles/bootstrap.min.css">'
        +'<link rel="stylesheet" href="/app/styles/cleaner.css">'
+       +"<link rel='icon' type='image/png' href='app/assets/apple-icon.png'>"
        +'<title>Silly Poke</title>'
        +'<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0">'
        +'<meta charset="UTF-8">'
