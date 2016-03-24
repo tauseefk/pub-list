@@ -1,0 +1,19 @@
+{
+    "users" : [
+        {
+            "name" : "Squirtle",
+            "avatar" : "",
+            "team" : "blue"
+        },
+        {
+            "name" : "Charmander",
+            "avatar" : "",
+            "team" : "red"
+        },
+        {
+            "name" : "Bulbasaur",
+            "avatar" : "",
+            "team" : "green"
+        }
+    ]
+}

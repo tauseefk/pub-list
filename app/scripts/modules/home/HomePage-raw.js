@@ -1,5 +1,5 @@
 var React = require('react'),
-    promiseMe = require('../src/promiseMe.js');
+    promiseMe = require('../utils/promiseMe.js');
 module.exports = React.createClass({
     displayName: 'exports',
 
