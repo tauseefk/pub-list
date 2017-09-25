@@ -94,7 +94,7 @@ var NavigationBar = React.createClass({
 
 var PostContent = React.createClass({
     render: function() {
-        var images = this.props.images.map(function(image){
+        var Images = this.props.images.map(function(image){
                 return (
                     <div className="postContent--image">
                         <img src={image.imageUrl} />

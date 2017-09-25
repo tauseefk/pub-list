@@ -9,6 +9,7 @@ app.set('port', (process.env.PORT || 5000));
 app.use(compress());
 app.use('/app/', express.static(__dirname + '/app/'));
 
+app.get('/webhook', Routes.getWebhook);
 app.get('/', Routes.route);
 app.get('/tasks', Routes.taskApp);
 
